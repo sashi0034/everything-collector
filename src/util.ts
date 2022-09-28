@@ -21,4 +21,8 @@ export function sleep(time: number): Promise<void>{
 		}, time)
 	})
 }
+
+export function getStrRemovedPeriod(str: string){
+	return str.replace(/\./g, "")
+}
   
