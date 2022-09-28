@@ -31,6 +31,7 @@ class MessageCollector{
 
     private isValidMessage(messageEvent: GenericMessageEvent){
         return messageEvent.bot_id===undefined && 
+            messageEvent.channel!==botConfig.targetChannel &&
             messageEvent.subtype!=="message_changed" &&
             messageEvent.subtype!=="message_deleted";
     }
